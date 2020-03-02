@@ -14,9 +14,10 @@ import { SectionMainComponent } from './Sections/section-main/section-main.compo
 import { SectionHealthComponent } from './sections/section-health/section-health.component';
 import { SectionTestChartComponent } from './sections/section-test-chart/section-test-chart.component';
 
-import { BarChartComponent } from './charts/bar-chart/bar-chart.component';
-import { LineChartComponent } from './charts/line-chart/line-chart.component';
-import { PieChartComponent } from './charts/pie-chart/pie-chart.component';
+import { BarChartComponent } from './charts/Tests/bar-chart/bar-chart.component';
+import { PieChartComponent } from './charts/Tests/pie-chart/pie-chart.component';
+
+import { LineChartComponent } from './charts/Prod/line-chart/line-chart.component';
 
 @NgModule({
   declarations: [
