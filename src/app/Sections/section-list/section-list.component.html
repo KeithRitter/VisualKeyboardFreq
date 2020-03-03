@@ -1,0 +1,17 @@
+<div class="section-container">
+    <h2>List Data</h2>
+    <table class="table table-hover table-dark">
+        <thead class="thead">
+            <tr>
+                <th>Time</th>
+                <th>Count</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let indata of data">
+                <td>{{ indata.time | date: 'medium'}}</td>
+                <td>{{ indata.count }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
