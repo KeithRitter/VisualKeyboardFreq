@@ -1,5 +1,13 @@
 # VKBGraph
 
+### What is is
+Angular side for my Visual Keyboard Frequency live stats project
+
+### API Side
+https://github.com/KeithRitter/VisualKeyboardFreqAPI
+
+
+### Junk below
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.4.
 
 ## Development server
