@@ -11,7 +11,6 @@ import { NavbarComponent } from './sections/section-navigation/navbar/navbar.com
 import { SidebarComponent } from './sections/section-navigation/sidebar/sidebar.component';
 
 import { SectionMainComponent } from './Sections/section-main/section-main.component';
-import { SectionHealthComponent } from './sections/section-health/section-health.component';
 import { SectionTestChartComponent } from './sections/section-test-chart/section-test-chart.component';
 import { SectionListComponent } from './sections/section-list/section-list.component';
 
@@ -26,7 +25,6 @@ import { SectionNavigationComponent } from './sections/section-navigation/sectio
     AppComponent,
     NavbarComponent,
     SidebarComponent,
-    SectionHealthComponent,
     SectionTestChartComponent,
     BarChartComponent,
     LineChartComponent,
