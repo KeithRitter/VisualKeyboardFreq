@@ -19,6 +19,8 @@ import { PieChartComponent } from './charts/Tests/pie-chart/pie-chart.component'
 
 import { LineChartComponent } from './charts/Prod/line-chart/line-chart.component';
 import { SectionNavigationComponent } from './sections/section-navigation/section-navigation.component';
+import { InputDataService } from 'src/input-data.service';
+import { HttpClient, HttpHandler, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -36,9 +38,10 @@ import { SectionNavigationComponent } from './sections/section-navigation/sectio
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    ChartsModule
+    ChartsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [InputDataService, HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
