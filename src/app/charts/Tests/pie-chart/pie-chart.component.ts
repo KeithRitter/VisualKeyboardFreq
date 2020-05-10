@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { InputDataService } from '../../../../input-data.service';
+import { THEME_COLORS } from '../../theme.colors';
 
 @Component({
   selector: 'app-pie-chart',
@@ -7,19 +9,37 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PieChartComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _inputDataService: InputDataService) { }
 
-  pieChartData : number[] = [84, 46, 12];
-  pieChartLabels : string[] = ['Mango', 'Aaron', 'Test'];
+  pieChartData : number[];
+  pieChartLabels : Date[];
   pieChartColors : any[] = [ 
     { 
-      backgroundColor: ['#26547c','#ff6b6b','#ffd166'],
-      borderColor: ['#000','#000','#000']
+      backgroundColor: this.themeColors("default"),
+      borderColor: this.themeColors("borders")
     } 
   ];
   pieChartType = 'doughnut';
 
   ngOnInit(): void {
+    this._inputDataService.getCount()
+    .subscribe(res =>{
+      const data = this.parsePieChartData(res);
+      this.pieChartData = data.map(x => x['count']);
+      this.pieChartLabels = data.map(x => x['date']);
+      console.log(data.map(x => x['count']));
+    });
+  }
+
+  parsePieChartData(res: res){
+    const data = res.slice(0);
+    return data;
+  }
+
+  themeColors(setName: string) : string[] {
+    const c = THEME_COLORS.slice(0)
+    .find(set => set.name == setName).colorSet;
+    return c;
   }
 
 }
