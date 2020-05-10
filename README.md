@@ -3,9 +3,12 @@
 ### What is is
 Angular side for my Visual Keyboard Frequency live stats project
 
-### API Side
-https://github.com/KeithRitter/VisualKeyboardFreqAPI
-</br>
+#### Links to individual repos
+<a href="https://github.com/KeithRitter/VisualKeyboardAPI">API</a>
+<br>
+<a href="https://github.com/KeithRitter/VisualKeyboardRecorder">Recorder</a>
+<br>
+<a href="https://github.com/KeithRitter/VisualKeyboardFreq">Angular End</a>
 </br>
 </br>
 </br>
