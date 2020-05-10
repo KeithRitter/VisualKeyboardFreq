@@ -41,7 +41,7 @@ import { HttpClient, HttpHandler, HttpClientModule } from '@angular/common/http'
     ChartsModule,
     HttpClientModule
   ],
-  providers: [InputDataService, HttpClient],
+  providers: [InputDataService, HttpClient, Location],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
