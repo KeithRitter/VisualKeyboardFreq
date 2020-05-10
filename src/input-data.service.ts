@@ -6,6 +6,6 @@ export class InputDataService {
    constructor(private _http: HttpClient) { }
    
    getCount() {
-       return this._http.get('https://localhost:44313/api/dev/');
+       return this._http.get('https://localhost:5001/api/prod/');
    }
 }
