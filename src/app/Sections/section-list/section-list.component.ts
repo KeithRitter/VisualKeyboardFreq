@@ -12,8 +12,6 @@ export class SectionListComponent implements OnInit {
 
   constructor(private _inputDataService: InputDataService) { }
 
-  dataRes: any;
-
  // data: InData[] = [    
  //   {time: new Date(2020, 3, 3) , count: 1},
  //   {time: new Date(2020, 3, 4) , count: 1},
@@ -22,7 +20,7 @@ export class SectionListComponent implements OnInit {
  //   {time: new Date(2020, 3, 7) , count: 1},
   //  {time: new Date(2020, 3, 8) , count: 1}
   //];
-  data: res;
+  data: Response;
   
   ngOnInit(): void {
     this._inputDataService.getCount()
