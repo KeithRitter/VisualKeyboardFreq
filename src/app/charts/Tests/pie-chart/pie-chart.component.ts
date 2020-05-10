@@ -9,7 +9,7 @@ import { THEME_COLORS } from '../../theme.colors';
 })
 export class PieChartComponent implements OnInit {
 
-  constructor(private _inputDataService: InputDataService) { }
+  constructor(private _inputDataService: InputDataService, private location: Location) { }
 
   pieChartData : number[];
   pieChartLabels : Date[];
@@ -29,6 +29,7 @@ export class PieChartComponent implements OnInit {
       this.pieChartLabels = data.map(x => x['date']);
       console.log(data.map(x => x['count']));
     });
+    this.location.reload();
   }
 
   parsePieChartData(res: res){

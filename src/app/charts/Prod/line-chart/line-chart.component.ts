@@ -17,7 +17,7 @@ const SAMPLE_LINECHART_LABELS: string[] = []
 
 export class LineChartComponent implements OnInit {
 
-  constructor(private _inputDataService: InputDataService) { }
+  constructor(private _inputDataService: InputDataService, private location: Location) { }
 
   dataRes: any;
   dataCounts: number[];
@@ -39,6 +39,7 @@ export class LineChartComponent implements OnInit {
       this.lineChartLabels = localChartData.map(x => x[0]);
       this.lineChartData = [{'data': localChartData.map(x => x[1]), 'label': 'Dates'}]
     });
+    this.location.reload();
   }
 
   getChartData(res: any){

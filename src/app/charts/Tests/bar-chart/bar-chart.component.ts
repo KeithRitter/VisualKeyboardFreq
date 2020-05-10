@@ -16,7 +16,7 @@ import * as moment from 'moment';
 })
 export class BarChartComponent implements OnInit {
 
-  constructor(private _inputDataService: InputDataService) { }
+  constructor(private _inputDataService: InputDataService, private location: Location) { }
 
   dataRes: any;
   dataCounts: number[];
@@ -39,7 +39,8 @@ export class BarChartComponent implements OnInit {
       this.barChartLabels = localChartData.map(x => x[0]);
       this.barChartData = [{'data': localChartData.map(x => x[1]), 'label': 'Dates'}]
       console.log(this.barChartData);
-    })
+    });
+    this.location.reload();
   }
 
   getChartData(res: any){
