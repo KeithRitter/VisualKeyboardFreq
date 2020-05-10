@@ -31,7 +31,7 @@ export class PieChartComponent implements OnInit {
     });
   }
 
-  parsePieChartData(res: res){
+  parsePieChartData(res: any){
     const data = res.slice(0);
     return data;
   }

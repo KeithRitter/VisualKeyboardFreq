@@ -20,7 +20,7 @@ export class SectionListComponent implements OnInit {
  //   {time: new Date(2020, 3, 7) , count: 1},
   //  {time: new Date(2020, 3, 8) , count: 1}
   //];
-  data: Response;
+  data: any;
   
   ngOnInit(): void {
     this._inputDataService.getCount()
